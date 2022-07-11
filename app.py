@@ -30,7 +30,7 @@ def recommend(title):
         rec_movies['similiarity'] = selected_movies_score
 
         movie_recommendation = rec_movies.reset_index(drop=True)
-        return movie_recommendation[1:6]  # Skipping the first row
+        return movie_recommendation[1:11]  # Skipping the first row
 
     elif title in tv_show['title'].values:
         tv_index = tv_show[tv_show['title'] == title].index.item()
@@ -44,7 +44,7 @@ def recommend(title):
         rec_tv['similiarity'] = selected_tv_score
 
         tv_recommendation = rec_tv.reset_index(drop=True)
-        return tv_recommendation[1:6]  # Skipping the first row
+        return tv_recommendation[1:11]  # Skipping the first row
 
 def Table(df):
     fig = go.Figure(data=[go.Table(
@@ -60,7 +60,8 @@ def Table(df):
                    align='left'))
     ])
 
-    fig.update_layout(height=700,
+    fig.update_layout(height=500,
+                      width = 900
                       title={'text': "Top 10 Movie Recommendations", 'font': {'size': 22, 'family': 'Gravitas One'}},
                       title_x=0.5
                       )
