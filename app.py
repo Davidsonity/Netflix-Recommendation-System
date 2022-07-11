@@ -48,13 +48,13 @@ def recommend(title):
 
 def Table(df):
     fig = go.Figure(data=[go.Table(
-        columnorder=[1, 2, 3, 4, 5],
-        columnwidth=[20, 20, 20, 30, 50],
-        header=dict(values=list(['Type', 'Title', 'Country', 'Genre(s)', 'Description']),
+        columnorder=[1, 2, 3, 4],
+        columnwidth=[30, 30, 30, 50],
+        header=dict(values=list(['Title', 'Country', 'Genre(s)', 'Description']),
                     line_color='black', font=dict(color='black', family="Gravitas One", size=20), height=40,
                     fill_color='#FF6865',
                     align='center'),
-        cells=dict(values=[df.type, df.title, df.country, df.genres, df.description],
+        cells=dict(values=[df.title, df.country, df.genres, df.description],
                    font=dict(color='black', family="Lato", size=16),
                    fill_color='#FFB3B2',
                    align='left'))
