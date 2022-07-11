@@ -61,7 +61,7 @@ def Table(df):
     ])
 
     fig.update_layout(height=500,
-                      width = 900
+                      width = 900,
                       title={'text': "Top 10 Movie Recommendations", 'font': {'size': 22, 'family': 'Gravitas One'}},
                       title_x=0.5
                       )
