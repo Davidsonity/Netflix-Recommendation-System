@@ -1,8 +1,9 @@
 
-# Netflix_Recommendation
+# Netflix Recommendation System
 
-![20220717-172113-online-video-cut](https://user-images.githubusercontent.com/96771321/179416882-1c3901ed-d72e-4e85-9846-83c5368e1003.gif)
-
+<p align='center'>
+  <a href="#"><img src="https://user-images.githubusercontent.com/96771321/214456292-ef421cff-a59f-46a1-9411-fef980ee6814.gif" width="400"></a>
+</p>
 
 
 > A COMPLETE END TO END PROJECT. Visit Website @ https://davidsonity-restaurants-recommendation-system-app-wqpses.streamlitapp.com/
