@@ -15,7 +15,7 @@ The content-based recommender system is highly based on the similarity calculati
 - CAST
 - COUNTRY
 - GENRES
-
+- TYPE
 
 #### Main Objectives
 The main objective of this project is to create a recommendation engine to recommend similar movies to users.
