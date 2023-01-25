@@ -26,7 +26,7 @@ Netflix is one of the most popular media and video streaming platforms. They hav
 Data Source: https://www.kaggle.com/datasets/shivamb/netflix-shows
 
 
-### Steps taken to build restaurants recommender systems
+### Steps taken to build the recommender systems
 - Data Collection 
 - Data Wrangling.
 - Data Cleaning
