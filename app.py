@@ -46,26 +46,6 @@ def recommend(title):
         tv_recommendation = rec_tv.reset_index(drop=True)
         return tv_recommendation[1:11]  # Skipping the first row
 
-def Table(df):
-    fig = go.Figure(data=[go.Table(
-        columnorder=[1, 2, 3, 4],
-        columnwidth=[30, 30, 30, 50],
-        header=dict(values=list(['Title', 'Country', 'Genre(s)', 'Description']),
-                    line_color='black', font=dict(color='black', family="Gravitas One", size=20), height=40,
-                    fill_color='#FF6865',
-                    align='center'),
-        cells=dict(values=[df.title, df.country, df.genres, df.description],
-                   font=dict(color='black', family="Lato", size=16),
-                   fill_color='#FFB3B2',
-                   align='left'))
-    ])
-
-    fig.update_layout(height=500,
-                      width = 900,
-                      title={'text': "Top 10 Movie Recommendations", 'font': {'size': 22, 'family': 'Gravitas One'}},
-                      title_x=0.5
-                      )
-    return st.plotly_chart(fig, use_container_width=True)
 
 
 movie_list = sorted(movies_df['title'].tolist() + tv_show['title'].tolist())
@@ -90,4 +70,6 @@ selected_movie = st.selectbox(
 
 if st.button('Show Recommendation'):
     recommended_movie_names = recommend(selected_movie)
-    Table(recommended_movie_names)
+    # display table
+    st.subheader("Top 10 Recommended Movies")
+    st.dataframe(data=recommended_movie_names[['title', 'country', 'genres', 'description', 'release_year', 'cast']])
